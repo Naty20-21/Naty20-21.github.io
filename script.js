@@ -6,19 +6,6 @@ function getPicture(responseObject) {
     return responseObject.sprites.other["official-artwork"].front_default;//Una url
 }
 
-function getTypes2(responseObject)   {
-    let types = responseObject.types;
-    let len = types.length;
-    let typeHtml = 
-    '<table><tr><th>Types</th></tr><tr>';
-    let i;
-    for(i = 0; i<len; i++){
-        typeHtml = typeHtml + '<td>' + types[i].type.name + '</td>';
-    }
-    typeHtml = typeHtml + '</tr></table>';
-    return typeHtml;
-}
-
 function getTypes(responseObject)   {
     let types = responseObject.types;
     let len = types.length;
