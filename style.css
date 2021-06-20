@@ -119,9 +119,6 @@ tr, th, td   {
     padding: 10px;
 }
 
-tr:nth-child(odd)  {
-    background-color: #00818A;
-}
 
 
 
