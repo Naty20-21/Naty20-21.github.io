@@ -11,7 +11,7 @@ body    {
 
 body *  {
     font-family: 'Roboto Slab';
-    font-size: 50px;
+    font-size: 30px;
     color: #F7BE16;
 }
 
@@ -99,17 +99,16 @@ nav {
     justify-content: center;
     background-color: #293462;
     color: #F7BE16; 
-    border: 5px solid #F7BE16;
+    border: 2px solid #F7BE16;
     border-radius: 25px;
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 table   {
     width: 100%;
     border-spacing: 0;
     border-bottom-left-radius: 25px;
-    /*border-top: 3px solid #F7BE16;*/
 }
 
 tr, th, td   {
