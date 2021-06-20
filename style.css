@@ -99,19 +99,28 @@ nav {
     justify-content: center;
     background-color: #293462;
     color: #F7BE16; 
-    border: 3px solid #F7BE16;
+    border: 5px solid #F7BE16;
     border-radius: 25px;
     margin-bottom: 40px;
     font-size: 30px;
 }
 
 table   {
-    border-top: 3px solid #F7BE16;
+    width: 100%;
+    border-spacing: 0;
+    border-bottom-left-radius: 25px;
+    /*border-top: 3px solid #F7BE16;*/
 }
 
-tr, td   {
+tr, th, td   {
+    margin: 0;
+    border-top: 2px solid #F7BE16;
     text-align: center;
     padding: 10px;
+}
+
+tr:nth-child(odd)  {
+    background-color: #00818A;
 }
 
 

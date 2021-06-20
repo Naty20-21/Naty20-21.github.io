@@ -9,10 +9,10 @@ function getPicture(responseObject) {
 function getTypes(responseObject)   {
     let types = responseObject.types;
     let len = types.length;
-    let typeHtml = '<div class="info"><p>Tipos</p><table><tr></tr>';
+    let typeHtml = '<div class="info"><p>Types</p><table><tr></tr>';
     let i;
     for(i = 0; i<len; i++){
-        typeHtml = typeHtml + '<td>' + types[i].type.name + '</td>';
+        typeHtml = typeHtml + '<td>' + capitalizeFirstLetter(types[i].type.name) + '</td>';
     }
     typeHtml = typeHtml + '</tr></table></div>';
     return typeHtml;
@@ -21,19 +21,28 @@ function getTypes(responseObject)   {
 function getAbilities(responseObject)   {
     let abilities = responseObject.abilities;
     let len = abilities.length;
-    let abilitiesHtml = '<div class="info"><p>Habilidades</p><table><tr></tr>';
+    let abilitiesHtml = '<div class="info"><p>Abilities</p><table><tr></tr>';
     let i;
     let hidden;
     for(i = 0; i<len; i++){
         hidden = abilities[i].is_hidden;
         if(hidden) {
-            abilitiesHtml = abilitiesHtml + '<td>' + abilities[i].ability.name + '<br>(hidden)</td>';
+            abilitiesHtml = abilitiesHtml + '<td>' + capitalizeFirstLetter(abilities[i].ability.name) + '<br>(hidden)</td>';
         } else {
-            abilitiesHtml = abilitiesHtml + '<td>' + abilities[i].ability.name + '</td>';
+            abilitiesHtml = abilitiesHtml + '<td>' + capitalizeFirstLetter(abilities[i].ability.name) + '</td>';
         }
     }
     abilitiesHtml = abilitiesHtml + '</tr></table></div>';
     return abilitiesHtml;
+}
+
+function getStats(responseObject)   {
+    let stats = responseObject.stats;
+    let statsHtml = '<div class="info"><p>Stats</p><table><tr><th>' + capitalizeFirstLetter(stats[0].stat.name) + '</th><th>' + capitalizeFirstLetter(stats[1].stat.name) + '</th><th>' + capitalizeFirstLetter(stats[2].stat.name) + '</th></tr>';
+    statsHtml = statsHtml + '<tr><td>' + stats[0].base_stat + '</td><td>' + stats[1].base_stat + '</td><td>' + stats[2].base_stat + '</td></tr>';
+    statsHtml = statsHtml + '<tr><th>' + capitalizeFirstLetter(stats[3].stat.name) + '</th><th>' + capitalizeFirstLetter(stats[4].stat.name) + '</th><th>' + capitalizeFirstLetter(stats[5].stat.name) + '</th></tr>';
+    statsHtml = statsHtml + '<tr><td>' + stats[3].base_stat + '</td><td>' + stats[4].base_stat + '</td><td>' + stats[5].base_stat + '</td></tr></table></div>';
+    return statsHtml;
 }
 
 function createHtml(responseObject) {
@@ -42,6 +51,7 @@ function createHtml(responseObject) {
     html = html + '<p>' + capitalizeFirstLetter(responseObject.name) + '</p>';
     html = html + getTypes(responseObject);
     html = html + getAbilities(responseObject);
+    html = html + getStats(responseObject);
     html = html + '</div>'
     return html;
 }

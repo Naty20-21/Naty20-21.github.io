@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <link href='https://fonts.googleapis.com/css?family=Roboto Slab' rel='stylesheet'>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel='stylesheet'>
     <title>Pokédex</title>
     <script src="script.js"></script>
     <link rel="stylesheet" type="text/css" href="style.css">
@@ -11,19 +11,19 @@
   <body>
 
     <header>
-      <img id="pokedex-logo" src="logo_pokedex.png" alt="Logotipo de la pokedex">
+      <img id="pokedex-logo" src="logo_pokedex.png" alt="Pokedex logo">
     </header>
 
-    <nav><a href="index.html"><img id="home-icon" src="yellow_home_button.png" alt="Botón home"></a></nav>
+    <nav><a href="index.html"><img id="home-icon" src="yellow_home_button.png" alt="Home button"></a></nav>
 
     <div id="main-container">
-      <img id="kanto-starters" src="iniciales_kanto.png" alt="Imagen de los iniciales de la región de Kanto">
+      <img id="kanto-starters" src="iniciales_kanto.png" alt="Image of the starter pokemon from Kanto">
       <div id="form-wrapper">
       <form id="pokemon-search-form" onsubmit="event.preventDefault(); showResults()">
-        <label for="pname">Nombre del pokemon</label><br>
+        <label>Pokemon name</label><br>
         <input id="pokemon-search-input" type="text"><br>
       </form>    
-      <button onclick="showResults()" id="search-button">Buscar</button>
+      <button onclick="showResults()" id="search-button">Search</button>
       </div>
     </div>
     
