@@ -19,9 +19,9 @@
     <div id="main-container">
       <img id="kanto-starters" src="iniciales_kanto.png" alt="Imagen de los iniciales de la región de Kanto">
       <div id="form-wrapper">
-      <form id="pokemon-search-form" class="" action="" method="">
+      <form id="pokemon-search-form" onsubmit="event.preventDefault(); showResults()">
         <label for="pname">Nombre del pokemon</label><br>
-        <input id="pokemon-search-input" type="text" name=""><br>
+        <input id="pokemon-search-input" type="text"><br>
       </form>    
       <button onclick="showResults()" id="search-button">Buscar</button>
       </div>
