@@ -45,8 +45,8 @@ function getStats(responseObject)   {
 
 function createHtml(responseObject) {
     let html = '<div id="result-container">';
-    html = html + '<img height=500px width=500px src=' + getPicture(responseObject) + '>';
-    html = html + '<p>' + capitalizeFirstLetter(responseObject.name) + '</p>';
+    html = html + '<img alt="Official artwork of the pokemon" height=500px width=500px src=' + getPicture(responseObject) + '>';
+    html = html + '<p id="poke-name">' + capitalizeFirstLetter(responseObject.name) + '</p>';
     html = html + getTypes(responseObject);
     html = html + getAbilities(responseObject);
     html = html + getStats(responseObject);
@@ -63,7 +63,7 @@ function getData(pokemon)  {
     xhr.onload = function() {
         if (xhr.status != 200) {
             document.getElementById("main-container").innerHTML = 
-            '<p>Se produjo un error: ' + xhr.status + '</p>';
+            '<p>An error ocurred: ' + xhr.status + '</p><br><p>Make sure to spell the name of the pokemon correctly</p>';
         } else { //Mostrar resultado
             let responseObject = xhr.response;
             document.getElementById("main-container").innerHTML = createHtml(responseObject);
