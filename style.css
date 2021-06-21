@@ -5,18 +5,18 @@ html, body  {
 body    {
     display: grid;
     grid-template-rows: 10% 5% auto 10%;
-    background-color: #216583;
+    background-color: #393E46;
     margin: 0;
 }
 
 body *  {
     font-family: 'Roboto Slab';
     font-size: 30px;
-    color: #F7BE16;
+    color: #FCDA05;
 }
 
 header, footer  {
-    background-color: #F7BE16;
+    background-color: #FCDA05;
 }
 
 #pokedex-logo   {
@@ -34,7 +34,7 @@ header, footer  {
 }
 
 nav {
-    background-color: #293462;
+    background-color: #222831;
 }
 
 #home-icon  {
@@ -75,8 +75,8 @@ nav {
 #search-button  {
     margin: auto;
     grid-row: 3 / 3;
-    background-color: #F7BE16;
-    color: #293462;
+    background-color: #FCDA05;
+    color: #222831;
     margin-top: 15px;
     margin-bottom: 30px;
 }
@@ -97,9 +97,8 @@ nav {
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
-    background-color: #293462;
-    color: #F7BE16; 
-    border: 2px solid #F7BE16;
+    background-color: #FFFBE0;
+    border: 2px solid #222831;
     border-radius: 25px;
     margin-bottom: 40px;
     font-size: 24px;
@@ -113,9 +112,14 @@ table   {
 
 tr, th, td   {
     margin: 0;
-    border-top: 2px solid #F7BE16;
+    border-top: 2px solid #222831;
     text-align: center;
     padding: 10px;
+    color: #222831;
+}
+
+caption {
+    color: #222831;
 }
 
 #poke-name  {
