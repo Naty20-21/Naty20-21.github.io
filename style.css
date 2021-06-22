@@ -11,7 +11,7 @@ body    {
 
 body *  {
     font-family: 'Roboto Slab';
-    font-size: 30px;
+    font-size: 28px;
     color: #FCDA05;
 }
 
@@ -44,26 +44,24 @@ nav {
     max-height: 100%;
 }
 
-#kanto-starters {
-    margin: auto;
-    height: 90%;
-    width: 90%;
-    max-height: 500px;
-    max-width: 500px;
-}
-
 #main-container {
     margin: auto;
 }
 
-#form-wrapper    {
-    display: grid;
-    grid-template-rows: auto auto;
-    text-align: center;
+#kanto-starters {
+    display: block;
+    margin: auto;
 }
 
-#pokemon-search-form    {
-    grid-row: 1 / span 2;
+@media only screen and (min-width: 1000px){
+    #kanto-starters {
+        height: 60%;
+        width: 60%;
+    }
+}
+
+#form-wrapper * {
+    text-align: center;
 }
 
 #pokemon-search-input   {
@@ -73,12 +71,12 @@ nav {
 }
 
 #search-button  {
+    display: block;
     margin: auto;
-    grid-row: 3 / 3;
     background-color: #FCDA05;
     color: #222831;
     margin-top: 15px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 
 #result-container   {
@@ -91,30 +89,56 @@ nav {
     align-self: center;
 }
 
+@media only screen and (min-width: 1000px){
+    #result-container   {
+        margin: 10px;
+        display: flex;
+        flex-flow: row nowrap;
+    }
+
+    #poke-name  {
+        text-align: center;
+        margin: 0;
+    }
+
+    #official-art   {
+        max-width: 400px;
+        max-height: 400px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    label, button   {
+        font-size: 60px;
+    }
+}
+
 .info   {
     width: 100%;
+    max-width: 700px;
+
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     justify-content: center;
+
     background-color: #FFFBE0;
     border: 2px solid #222831;
     border-radius: 25px;
-    margin-bottom: 40px;
-    font-size: 24px;
+    margin-bottom: 20px;
+    font-size: 16px;
 }
 
 table   {
     width: 100%;
     border-spacing: 0;
-    border-bottom-left-radius: 25px;
 }
 
 tr, th, td   {
     margin: 0;
     border-top: 2px solid #222831;
     text-align: center;
-    padding: 10px;
+    padding: 5px;
     color: #222831;
 }
 
@@ -123,7 +147,8 @@ caption {
 }
 
 #poke-name  {
-    font-size: 50px;
+    text-align: center;
+    font-size: 40px;
 }
 
 
